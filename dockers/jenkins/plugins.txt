@@ -1,0 +1,5 @@
+git
+maven-plugin
+junit
+workflow-aggregator
+pipeline-stage-view
