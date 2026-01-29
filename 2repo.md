@@ -25,3 +25,33 @@ git commit -m "Initial commit: template_v2"
 git remote add origin git@github.com:wudye/tempTest.git
 git branch -M main
 git push -u origin main
+
+
+# 进入仓库根目录
+cd E:\spring microservice template V2\spring-microservice-template
+
+# 查看远程
+git remote -v
+
+# 确保 origin 指向原始仓库（如需修正）
+git remote set-url origin git@github.com:wudye/spring-microservice-template.git
+
+# 抓取 origin 的更新
+git fetch origin
+
+# 切换到 main 分支（如果不在 main）
+git checkout main
+
+# 将本地 main 与 origin/main 对齐（先拉取远程变更）
+git pull origin main
+
+# 将本地 main 设置为跟踪 origin/main（若尚未设置）
+git branch --set-upstream-to=origin/main main
+
+# 可选：如果不再需要临时远程，移除 tempTest
+git remote remove tempTest
+
+# 验证当前分支和上游
+git status
+git remote -v
+git branch -vv
